@@ -14,18 +14,17 @@ When a player has no more cards left, they are out.
 The player who is left at the end is the winner.
 
 TURNS
-The player to the left of the dealer goes first;
+The player to the left of the dealer goes first:
 
 while (player has > 0 cards) {
   The player taking their turn will place a card face up in the middle
-    If it is a jack:
-     they must try to slap it:
-       if they are the first to slap the jack:
-         they take the jack
-       if they do not slap the jack first:
-         the player who did will take the pile
+    If it is a jack they must try to slap it:
+      if they are the first to slap the jack:
+        they take the jack and all cards under it
+      if they do not slap the jack first:
+        the player who did will take the pile
         
-    If there is no jack played;
+    If there is no jack played:
       if the player slaps it:
         they must put a card underneath the card played
      if no one slaps it:
@@ -44,6 +43,6 @@ while (player has > 0 cards) {
       they do not slap the card:
         they next player will take their turn
         
-  If the player does not have any more cards to play:
+  If the player does not have any more cards to play;
     they are out of the game
 }
