@@ -11,57 +11,39 @@ The player who slapped the jack turns them face down, shuffles them, and adds it
 When more than one player slaps at a jack, the one whose hand is directly on top of the jack wins the pile.
 If a player slaps at any card in the center that is not a jack, they must give put one card under the pile.
 When a player has no more cards left, they are out.
-The goal is to win all the cards, by being first to slap each jack as it is played to the center.
+The player who is left at the end is the winner.
 
 TURNS
+The player to the left of the dealer goes first;
 
-1st turn
-The player to the left of the dealer places a card face up in the middle;
-  If it is a jack;
-    they must try to slap it
-      if they are the first to slap the jack, they take the jack
-        if they do not slap the jack first, the player who did will take the pile
-  If there is no jack played;
-    the player slaps it and they must put a card underneath the card played
-      no one slaps it, the person to their left will take their turn
-If another player places a jack in the middle while it is not player 1's turn;
-  the player can try to slap it;
-    if they slap it first, they take the pile
-    if they do not, the player who slapped first takes the pile
-If another player places a card that is not a jack while it is not player 1's turn and player 1 slaps it;
-  they must put one of their cards under the pile
-If they do not have any more cards to play they are out
-
-2nd turn
-The player will place a card face up in the middle;
-   If it is a jack;
-    they must try to slap it
-      if they are the first to slap the jack, they take the jack
-        if they do not slap the jack first, the player who did will take the pile
-  If there is no jack played;
-    the player slaps it and they must put a card underneath the card played
-      no one slaps it, the person to their left will take their turn
-If another player places a jack in the middle while it is not player 1's turn;
-  the player can try to slap it;
-    if they slap it first, they take the pile
-    if they do not, the player who slapped first takes the pile
-If another player places a card that is not a jack while it is not player 1's turn and player 1 slaps it;
-  they must put one of their cards under the pile
-If they do not have any more cards to play they are out
-  
-3rd Turn
-The player will place a card face up in the middle;
-    If it is a jack;
-    they must try to slap it
-      if they are the first to slap the jack, they take the jack
-        if they do not slap the jack first, the player who did will take the pile
-  If there is no jack played;
-    the player slaps it and they must put a card underneath the card played
-      no one slaps it, the person to their left will take their turn
- If another player places a jack in the middle while it is not player 1's turn;
-  the player can try to slap it;
-    if they slap it first, they take the pile
-    if they do not, the player who slapped first takes the pile
-If another player places a card that is not a jack while it is not player 1's turn and player 1 slaps it;
-  they must put one of their cards under the pile
-If they do not have any more cards to play they are out
+while (player has > 0 cards) {
+  The player taking their turn will place a card face up in the middle
+    If it is a jack:
+     they must try to slap it:
+       if they are the first to slap the jack:
+         they take the jack
+       if they do not slap the jack first:
+         the player who did will take the pile
+        
+    If there is no jack played;
+      if the player slaps it:
+        they must put a card underneath the card played
+     if no one slaps it:
+        the person to their left will take their turn
+    
+    If another player places a jack in the middle while it is not player 1's turn:
+      the player can try to slap it:
+      if they slap it first:
+          they take the jack and all the cards under it
+      if they do not slap the jack first:
+          the player who did will take the jack and all the cards under it
+          
+    If another player places a card that is not a jack in the middle:
+      they slap the card:
+        they must place a card under the pile of cards in the middle
+      they do not slap the card:
+        they next player will take their turn
+        
+  If the player does not have any more cards to play:
+    they are out of the game
+}
